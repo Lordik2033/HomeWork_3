@@ -1,0 +1,18 @@
+#3.3
+name_staff = "Иван", "Мария", "Петр", "Илья", "Сергей"
+name_staff_letter=[]
+same_capital_letters={}
+
+
+def thesaurus(name_staff):
+    def same_capital_letters_sch(name_staff):
+        return name_staff.startswith(my_names)
+    for i in name_staff:
+        name_staff_letter.append(name_staff[name_staff.index(i)][:1])
+        my_names=name_staff[name_staff.index(i)][:1]
+        name_staff_test = list(filter(same_capital_letters_sch, name_staff))
+        same_capital_letters[my_names] = name_staff_test
+    return same_capital_letters
+
+
+print(thesaurus(name_staff))
